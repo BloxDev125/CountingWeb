@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require('uuid');
 const fs = require('fs');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Use the specified port or default to 3000
 
 let count = 0;
 const clients = new Set();
