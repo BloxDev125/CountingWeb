@@ -26,7 +26,8 @@ function handleWebSocketMessage(event) {
 
 document.getElementById('incrementButton').addEventListener('click', increment);
 
-const socket = new WebSocket(`ws://${location.host}`);
+const socket = new WebSocket(`wss://${location.host}`);
+
 socket.addEventListener('message', handleWebSocketMessage);
 
 function fetchCount() {
